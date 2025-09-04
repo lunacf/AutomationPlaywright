@@ -40,6 +40,7 @@ public class Prueba {
                 default:
                     throw new IllegalArgumentException("Browser no soportado: " + name);
             }
+
             browsers.add(browser);
             BrowserContext context = browser.newContext();
             contexts.add(context);
@@ -49,7 +50,7 @@ public class Prueba {
         }
     }
 
- /*   @Test
+  @Test
     @Order(1)
     @DisplayName("Abrir carrito")
     void abrirCarrito() {
@@ -110,7 +111,7 @@ public class Prueba {
             APIResponse response = apiContext.get("https://demoqa.com/bad-request");
             assertEquals(200, response.status(), "El GET no devolvió 200 OK");
         }
-    } */
+    }
 
     @Test
     @Order(6)
